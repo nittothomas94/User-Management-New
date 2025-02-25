@@ -35,7 +35,7 @@ const AddUser = () => {
         'https://user-management-new-backend.onrender.com/api/upload-image',
         formData
       );
-      setUser({ ...user, image: response.data.url });
+      setUser({ ...user, image: response.data.url }); // Cloudinary URL
     } catch (err) {
       console.error('Image upload failed:', err);
       alert('Image upload failed!');
