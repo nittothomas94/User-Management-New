@@ -32,7 +32,7 @@ const AddUser = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/api/upload-image',
+        'https://user-management-new-backend.onrender.com/api/upload-image',
         formData
       );
       setUser({ ...user, image: response.data.url });
@@ -45,7 +45,7 @@ const AddUser = () => {
   console.log(user);
 
   const onAddUserClick = async () => {
-    const response = await axios.post('http://localhost:3000/api/users', user);
+    const response = await axios.post('https://user-management-new-backend.onrender.com/api/users', user);
     navigate('/');
   };
 
