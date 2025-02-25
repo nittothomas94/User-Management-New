@@ -24,7 +24,7 @@ router.post('/', upload.single('avatar'), (req, res) => {
     return res.status(400).json({ message: 'No file uploaded' });
   }
 
-  const fileUrl = 'http://localhost:3000/images/' + req.file.originalname; // Generate file URL
+  const fileUrl = 'https://user-management-new-backend.onrender.com/images/' + req.file.originalname; // Generate file URL
 
   res.status(200).json({ url: fileUrl }); // Respond with file URL
 });
