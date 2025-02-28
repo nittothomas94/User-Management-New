@@ -21,7 +21,9 @@ const Home = () => {
   }, []);
 
   const getAllUsers = async () => {
-    const response = await axios.get('https://user-management-new-backend.onrender.com/api/users');
+    const response = await axios.get(
+      'https://user-management-new-backend.onrender.com/api/users'
+    );
     setUsers(response.data);
   };
 
@@ -97,7 +99,8 @@ const Home = () => {
 
   const onDeleteUser = async () => {
     const response = await axios.delete(
-      'https://user-management-new-backend.onrender.com/api/users/' + selectedUserId
+      'https://user-management-new-backend.onrender.com/api/users/' +
+        selectedUserId
     );
     getAllUsers();
     setDeleteModal(false);
